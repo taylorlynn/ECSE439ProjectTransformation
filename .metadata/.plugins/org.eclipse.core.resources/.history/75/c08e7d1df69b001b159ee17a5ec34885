@@ -1,0 +1,13 @@
+
+categories: work; school; end
+
+site 'my web':
+	description: 'my sample site';
+	icon: 'www.google.ca';
+	pages: 
+		page 'home':
+			description: 'my home page';
+			categories: [work];
+		end
+	end
+end

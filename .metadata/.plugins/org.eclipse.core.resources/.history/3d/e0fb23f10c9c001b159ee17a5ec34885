@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.xtext.org/example/blog/Blog')]
+
+
+[template public generateElement(aModel : Model)]
+
+	[comment @main/]
+	[file (pack.name.toUpperFirst()+'.html', false, 'UTF-8')]
+		help
+
+	[/file]
+
+[/template]

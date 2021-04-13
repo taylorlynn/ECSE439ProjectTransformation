@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+    <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+    <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/TestModels/model3.xmi"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/org.eclipse.acceleo.module.xtext2html/generatedCode"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/org.eclipse.acceleo.module.xtext2html/src/org/eclipse/acceleo/module/xtext2html/common/Generate.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.acceleo.module.xtext2html.common.Generate"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="org.eclipse.acceleo.module.xtext2html"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;/Users/taylorlynncurtis/Desktop/ECSE539/runtime-EclipseXtext/TestModels/model3.xmi&quot; &quot;/Users/taylorlynncurtis/Desktop/ECSE539/runtime-EclipseXtext/org.eclipse.acceleo.module.xtext2html/generatedCode&quot;"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.acceleo.module.xtext2html"/>
+</launchConfiguration>

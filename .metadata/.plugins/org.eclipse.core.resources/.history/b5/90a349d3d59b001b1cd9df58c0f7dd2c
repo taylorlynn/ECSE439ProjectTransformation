@@ -1,0 +1,9 @@
+
+site 'my web':
+	description: 'my sample site';
+	icon: 'www.google.ca';
+	pages: 
+		page 'home':
+			description: 'my home page';
+		end
+end
