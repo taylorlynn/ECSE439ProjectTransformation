@@ -1,0 +1,68 @@
+[comment encoding = UTF-8 /]
+[comment Thanks to w3schools for help with how to filter posts! https://www.w3schools.com/howto/howto_js_filter_elements.asp/]
+[comment Specifically, the /]
+[module generate('http://www.xtext.org/example/blog/Blog')]
+
+
+[template public generateElement(m : Model)]
+
+	[comment @main/]
+	[file (m.site.name.toUpperFirst()+'.html', false, 'UTF-8')]
+		<!DOCTYPE html>
+		
+		<html>
+		<script>
+			[comment The below function has been modified from w3schools /]
+			function filterSelection(c) {
+  				var x, i;
+  				x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+		</script>
+		<head>
+			<h1> [m.site.name/] </h1>
+			<h3> [m.site.description/] </h3>
+		
+		</head>
+		<body>
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			
+		[for (c: Category | m.categories) separator('\n')]
+			<button class="btn" onclick="filterSelection([c.name/])">[c.name/]</button>
+		[/for]
+
+		</div>
+
+		<div class="container">
+		[for (p: Page | m.site.pages) separator('\n')]
+			<div class="filterPage [for (c:Category | p.categories) separator(' ')][c.name/][/for]">
+				<h2> Page : [p.name/]</h2>
+				<h4>[p.description/]</h4>
+				[for (s:Section | p.sections) separator('\n')]
+					<h3> Section : [s.name/] </h3>
+					[for (sc:SectionContent | s.content) separator('\n')]
+					[if (sc.oclIsKindOf(ParagraphContent))]
+						<p> [sc.oclAsType(ParagraphContent).content/] </p>
+					[/if]
+					[if (sc.oclIsKindOf(ImageContent))]
+						<a href="[sc.oclAsType(ImageContent).image.url/]">
+         					<img alt="[sc.oclAsType(ImageContent).image.name/]" src="[sc.oclAsType(ImageContent).image.url/]" width="450" height="350">
+      					</a>
+					[/if]
+					[/for]
+				[/for]
+			</div>
+		[/for]
+		</div>
+
+		</body>	
+		</html>
+	[/file]
+
+[/template]

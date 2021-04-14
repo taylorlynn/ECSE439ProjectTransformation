@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="ASCII"?>
 <blog:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blog="http://www.xtext.org/example/blog/Blog">
-  <images name="catImage" url="https://somelink.com/..."/>
+  <images name="catImage" url="https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg"/>
   <images name="dogImage" url="https://someotherlink.com/..."/>
-  <categories name="ecse437"/>
+  <images name="aTree" url="https://hedgekingottawa.ca/wp-content/uploads/2020/11/tree-care.jpg"/>
+  <categories name="ecse439"/>
   <categories name="comp360"/>
   <categories name="school"/>
   <categories name="fun"/>
   <site name="My Blog Site" description="A simple blog site covering my courses over my academic career" hasNavbar="true" iconUrl="https://somelink.to/favicon.ico">
-    <pages name="ECSE 439" description="About my experiences in ECSE 439" categories="//@categories.2 //@categories.3">
+    <pages name="ECSE 439" description="About my experiences in ECSE 439" categories="//@categories.2 //@categories.0">
       <sections name="First Lecture">
         <content xsi:type="blog:ParagraphContent" content="The first lecture was cool"/>
         <content xsi:type="blog:ImageContent" image="//@images.0"/>
         <content xsi:type="blog:ParagraphContent" content="The end"/>
       </sections>
+      <sections name="Second Lecture">
+        <content xsi:type="blog:ParagraphContent" content="The second lecture was cool too"/>
+        <content xsi:type="blog:ParagraphContent" content="I learned a lot"/>
+        <content xsi:type="blog:ParagraphContent" content="The end"/>
+      </sections>
     </pages>
-    <pages name="COMP 360" description="Algorithm Design"/>
+    <pages name="COMP 360" description="Algorithm Design" categories="//@categories.2 //@categories.1">
+      <sections name="My thoughts">
+        <content xsi:type="blog:ParagraphContent" content="I like trees"/>
+        <content xsi:type="blog:ImageContent" image="//@images.2"/>
+      </sections>
+    </pages>
+    <pages name="My own coding work" description="My personal projects" categories="//@categories.3"/>
+    <pages name="No categories here!" description="My personal projects"/>
   </site>
 </blog:Model>

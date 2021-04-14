@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.xtext.org/example/blog/Blog')]
+
+
+[template public generateElement(m : Model)]
+
+	[comment @main/]
+	[file (m.site.name.toUpperFirst()+'.html', false, 'UTF-8')]
+		<!DOCTYPE html>
+		
+		<html>
+		<head>
+			<h1> [m.site.name/] </h1>
+			<h3> [m.site.description/] </h3>
+		
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			
+		[for (c: Category | m.categories) separator('\n')]
+			<button class="btn" onclick="filterSelection([c.name/])">[c.name/]</button>
+		[/for]
+
+		</div>
+
+				
+		</html>
+	[/file]
+
+[/template]

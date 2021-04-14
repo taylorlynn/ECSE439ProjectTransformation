@@ -1,0 +1,34 @@
+// Images separately defined to be more easily reused
+images:
+  catImage: "https://somelink.com/...";
+  dogImage: "https://someotherlink.com/...";
+end
+
+categories:
+  ecse437;
+  comp360;
+  school;
+  fun;
+end
+
+site "My Blog Site":
+  description: "A simple blog site covering my courses over my academic career";
+  has_navbar;
+  icon: "https://somelink.to/favicon.ico";
+  pages: 
+    page "ECSE 439":
+      description: "About my experiences in ECSE 439";
+      categories: [school, fun];
+      sections:
+        section "First Lecture":
+          paragraph: "The first lecture was cool";
+          image: catImage;
+          paragraph: "The end";
+        end
+      end
+    end
+    page "COMP 360":
+      description: "Algorithm Design";
+    end
+  end
+end

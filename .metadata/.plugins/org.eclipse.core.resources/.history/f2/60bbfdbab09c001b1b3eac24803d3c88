@@ -1,0 +1,40 @@
+[comment encoding = UTF-8 /]
+[comment Thanks to w3schools for help with how to filter posts! https://www.w3schools.com/howto/howto_js_filter_elements.asp/]
+[module generate('http://www.xtext.org/example/blog/Blog')]
+
+
+[template public generateElement(m : Model)]
+
+	[comment @main/]
+	[file (m.site.name.toUpperFirst()+'.html', false, 'UTF-8')]
+		<!DOCTYPE html>
+		
+		<html>
+		<head>
+			<h1> [m.site.name/] </h1>
+			<h3> [m.site.description/] </h3>
+		
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			
+		[for (c: Category | m.categories) separator('\n')]
+			<button class="btn" onclick="filterSelection([c.name/])">[c.name/]</button>
+		[/for]
+
+		</div>
+
+		<div class="container">
+		[for (p: Page | m.site.pages) separator('\n')]
+			<div class="filterPage 
+			[for (c:Category | p.categories) separator(' ')]
+			[c.name/]
+			[/for]
+			">[p.name/]</div>
+		[/for]
+		</div>
+
+				
+		</html>
+	[/file]
+
+[/template]

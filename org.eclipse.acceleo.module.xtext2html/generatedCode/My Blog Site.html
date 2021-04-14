@@ -1,2 +1,120 @@
-		help
+		<!DOCTYPE html>
+		
+		<html>
+		<script>
+			filterSelection("all")
+			function filterSelection(c) {
+  				var x, i;
+  				x = document.getElementsByClassName("filterPage");
+  				if (c == "all") c = "";
+  				
+  				for (i = 0; i < x.length; i++) {
+    				removeClass(x[i], "show");
+    				if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  				}
+			}
 
+			function addClass(element, name) {
+				var i, arr1, arr2;
+				arr1 = element.className.split(" ");
+				arr2 = name.split(" ");
+				for (i = 0; i < arr2.length; i++) {
+					if (arr1.indexOf(arr2[i]) == -1) {
+						element.className += " " + arr2[i];
+					}
+				}
+			}
+
+			function removeClass(element, name) {
+				var i, arr1, arr2;
+  				arr1 = element.className.split(" ");
+  				arr2 = name.split(" ");
+			  	for (i = 0; i < arr2.length; i++) {
+			    	while (arr1.indexOf(arr2[i]) > -1) {
+			      		arr1.splice(arr1.indexOf(arr2[i]), 1);
+			    	}
+			  	}
+			  	element.className = arr1.join(" ");
+			}
+		</script>
+		<style>
+
+			.filterPage {
+				background-color: #36c8f5;
+				color: #000000;
+				display: none;
+			}
+			
+			.show {
+				display: block;
+			}
+			
+			.container {
+				margin-top: 20px;
+				overflow: hidden;
+			}
+		</style>
+		<head>
+			<h1> My Blog Site </h1>
+			<h3> A simple blog site covering my courses over my academic career </h3>
+		
+		</head>
+		<body>
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			
+			<button class="btn" onclick="filterSelection('ecse439')">ecse439</button>
+
+			<button class="btn" onclick="filterSelection('comp360')">comp360</button>
+
+			<button class="btn" onclick="filterSelection('school')">school</button>
+
+			<button class="btn" onclick="filterSelection('fun')">fun</button>
+
+		</div>
+
+		<div class="container">
+			<div class="filterPage school ecse439">
+				<h2> Page : ECSE 439</h2>
+				<h4>About my experiences in ECSE 439</h4>
+					<h3> Section : First Lecture </h3>
+						<p> The first lecture was cool </p>
+
+						<a href="https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg">
+         					<img alt="catImage" src="https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg" width="450" height="350">
+      					</a>
+
+						<p> The end </p>
+
+					<h3> Section : Second Lecture </h3>
+						<p> The second lecture was cool too </p>
+
+						<p> I learned a lot </p>
+
+						<p> The end </p>
+			</div>
+
+			<div class="filterPage school comp360">
+				<h2> Page : COMP 360</h2>
+				<h4>Algorithm Design</h4>
+					<h3> Section : My thoughts </h3>
+						<p> I like trees </p>
+
+						<a href="https://hedgekingottawa.ca/wp-content/uploads/2020/11/tree-care.jpg">
+         					<img alt="aTree" src="https://hedgekingottawa.ca/wp-content/uploads/2020/11/tree-care.jpg" width="450" height="350">
+      					</a>
+			</div>
+
+			<div class="filterPage fun">
+				<h2> Page : My own coding work</h2>
+				<h4>My personal projects</h4>
+			</div>
+
+			<div class="filterPage ">
+				<h2> Page : No categories here!</h2>
+				<h4>My personal projects</h4>
+			</div>
+		</div>
+
+		</body>	
+		</html>
