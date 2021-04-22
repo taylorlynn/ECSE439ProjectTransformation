@@ -1,25 +1,24 @@
 // Images separately defined to be more easily reused
 images:
   catImage: "https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg";
-  dogImage: "https://someotherlink.com/...";
   aTree: "https://hedgekingottawa.ca/wp-content/uploads/2020/11/tree-care.jpg";
 end
 
 categories:
-  ecse439;
-  comp360;
+  ecse;
+  comp;
   school;
   fun;
 end
 
-site "My Blog Site":
+site "My Third Blog Site":
   description: "A simple blog site covering my courses over my academic career";
   has_navbar;
-  icon: "https://somelink.to/favicon.ico";
+  icon: "https://albertoroura.com/wp-content/uploads/2014/05/html5_logo.png";
   pages: 
     page "ECSE 439":
       description: "About my experiences in ECSE 439";
-      categories: [school, ecse439];
+      categories: [school, ecse];
       sections:
         section "First Lecture":
           paragraph: "The first lecture was cool";
@@ -35,13 +34,24 @@ site "My Blog Site":
     end
     page "COMP 360":
       description: "Algorithm Design";
-      categories: [school, comp360];
+      categories: [school, comp];
       sections:
       	section "My thoughts" :
       		paragraph: "I like trees";
       		image: aTree;
       	end
       end
+    end
+    page "COMP 330":
+    	description: "Theory of Computation";
+    	categories: [school, comp];
+    	sections:
+    		section "Midterm notes" :
+	    		paragraph: "I need to study <b> state machines </b>";
+	    		paragraph: "I need to study <b> state machines </b>";
+	    		paragraph: "I need to study <b> grammars </b>";
+    		end
+    	end
     end
     page "My own coding work":
     	description: "My personal projects";

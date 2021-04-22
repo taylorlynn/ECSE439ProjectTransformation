@@ -1,0 +1,178 @@
+		<!DOCTYPE html>
+		
+		<html>
+		<head>
+		<script>
+			function filterSelection(c) {
+  				var x, i;
+  				x = document.getElementsByClassName("filterPage");
+  				if (c == "all") c = "";
+  				
+  				for (i = 0; i < x.length; i++) {
+    				removeClass(x[i], "show");
+    				if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+  				}
+			}
+
+			function addClass(element, name) {
+				var i, arr1, arr2;
+				arr1 = element.className.split(" ");
+				arr2 = name.split(" ");
+				for (i = 0; i < arr2.length; i++) {
+					if (arr1.indexOf(arr2[i]) == -1) {
+						element.className += " " + arr2[i];
+					}
+				}
+			}
+
+			function removeClass(element, name) {
+				var i, arr1, arr2;
+  				arr1 = element.className.split(" ");
+  				arr2 = name.split(" ");
+			  	for (i = 0; i < arr2.length; i++) {
+			    	while (arr1.indexOf(arr2[i]) > -1) {
+			      		arr1.splice(arr1.indexOf(arr2[i]), 1);
+			    	}
+			  	}
+			  	element.className = arr1.join(" ");
+			}
+		</script>
+		<style>
+
+			.filterPage {
+				background-color: #36c8f5;
+				color: #000000;
+				display: none;
+			}
+			
+			.show {
+				display: block;
+			}
+			
+			.container {
+				margin-top: 20px;
+				overflow: hidden;
+			}
+
+			.navBar {
+			  border: none;
+			  outline: none;
+			  padding: 12px 16px;
+			  background-color: #f1f1f1;
+			  cursor: pointer;
+			}
+			
+			.navBar:hover {
+			  background-color: #ddd;
+			}
+			
+			.navBar.active {
+			  background-color: #666;
+			  color: white;
+			}
+		</style>
+		
+		<link rel="icon" href="https://cdn.nar.realtor/sites/default/files/styles/main_stage_image/public/CS_Memes-02_14_20-1300w_v2.jpg?itok=reUsW1ge" type="image/x-icon">
+		</head>
+		<body>
+		<h1> My Second Blog </h1>
+		<h3> some of my favourite memes </h3>
+
+		<div id="myNavBar">
+			<h4> Navigate to a page! </h4>
+			
+			<button class="navBar" onclick="filterSelection('Lord of the Rings')">Lord of the Rings</button>
+
+			<button class="navBar" onclick="filterSelection('Game of Thrones')">Game of Thrones</button>
+
+			<button class="navBar" onclick="filterSelection('Harry Potter')">Harry Potter</button>
+
+			<button class="navBar" onclick="filterSelection('The Big Bang Theory')">The Big Bang Theory</button>
+
+			<button class="navBar" onclick="filterSelection('Friends')">Friends</button>
+
+		</div>
+		<div id="myBtnContainer">
+			<h4> Filter Pages by the following categories : </h4>
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			
+			<button class="btn" onclick="filterSelection('movie')">movie</button>
+
+			<button class="btn" onclick="filterSelection('tv')">tv</button>
+
+			<button class="btn" onclick="filterSelection('favourites')">favourites</button>
+
+		</div>
+
+		<div class="container">
+			<div class="filterPage movie Lord of the Rings">
+				<h2> Page : Lord of the Rings</h2>
+				<h4>A collection of Lord of the Rings memes</h4>
+					<h3> Section : images </h3>
+						<a href="https://decider.com/wp-content/uploads/2020/06/lord-of-the-rings-sean-bean.jpg?quality=80&strip=all&w=978">
+         					<img alt="lotr" src="https://decider.com/wp-content/uploads/2020/06/lord-of-the-rings-sean-bean.jpg?quality=80&strip=all&w=978" width="450" height="350">
+      					</a>
+			</div>
+
+			<div class="filterPage tv favourites Game of Thrones">
+				<h2> Page : Game of Thrones</h2>
+				<h4>A collection of GoT memes</h4>
+					<h3> Section : images </h3>
+						<a href="https://worldwideinterweb.com/wp-content/uploads/2017/07/game-of-throne-memes-2.jpg">
+         					<img alt="got" src="https://worldwideinterweb.com/wp-content/uploads/2017/07/game-of-throne-memes-2.jpg" width="450" height="350">
+      					</a>
+			</div>
+
+			<div class="filterPage movie favourites Harry Potter">
+				<h2> Page : Harry Potter</h2>
+				<h4>A collection of Harry Potter memes</h4>
+					<h3> Section : images </h3>
+						<a href="https://www.liveabout.com/thmb/zRCNMwbQx1MIBEoj7nqC0m_detM=/1265x712/smart/filters:no_upscale()/urawattharry-5ada2c3a18ba0100371a5552.JPG">
+         					<img alt="harryPotter" src="https://www.liveabout.com/thmb/zRCNMwbQx1MIBEoj7nqC0m_detM=/1265x712/smart/filters:no_upscale()/urawattharry-5ada2c3a18ba0100371a5552.JPG" width="450" height="350">
+      					</a>
+
+						<a href="https://bookstr.com/wp-content/uploads/2019/09/Featured-image-via-BookBub.png">
+         					<img alt="harryPotter2" src="https://bookstr.com/wp-content/uploads/2019/09/Featured-image-via-BookBub.png" width="450" height="350">
+      					</a>
+			</div>
+
+			<div class="filterPage tv The Big Bang Theory">
+				<h2> Page : The Big Bang Theory</h2>
+				<h4>A collection of Big Bang Theory memes</h4>
+					<h3> Section : images </h3>
+						<a href="https://i.chzbgr.com/full/7074992128/h2125F6BD/the-tune-of-sheldon">
+         					<img alt="bbt" src="https://i.chzbgr.com/full/7074992128/h2125F6BD/the-tune-of-sheldon" width="450" height="350">
+      					</a>
+
+						<a href="https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg">
+         					<img alt="bbt2" src="https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg" width="450" height="350">
+      					</a>
+			</div>
+
+			<div class="filterPage tv Friends">
+				<h2> Page : Friends</h2>
+				<h4>A collection of Friends memes</h4>
+					<h3> Section : images </h3>
+						<a href="https://www.liveabout.com/thmb/hscG6lGOZeu4SFqvOqtE0C_2XZs=/837x640/filters:no_upscale():max_bytes(150000):strip_icc()/BFF27-5ac2f4b38023b9003671cb46.jpg">
+         					<img alt="friends" src="https://www.liveabout.com/thmb/hscG6lGOZeu4SFqvOqtE0C_2XZs=/837x640/filters:no_upscale():max_bytes(150000):strip_icc()/BFF27-5ac2f4b38023b9003671cb46.jpg" width="450" height="350">
+      					</a>
+
+						<a href="https://i.chzbgr.com/full/9571336960/h85DECDD6/funny-memes-stupid-memes-memes-friday-the-13th-friday-the-13th-2020-friends-joeys-delayed-reaction">
+         					<img alt="friends2" src="https://i.chzbgr.com/full/9571336960/h85DECDD6/funny-memes-stupid-memes-memes-friday-the-13th-friday-the-13th-2020-friends-joeys-delayed-reaction" width="450" height="350">
+      					</a>
+
+					<h3> Section : An Example of an image re-use </h3>
+						<p> This image is intentially misplaced. </p>
+
+						<a href="https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg">
+         					<img alt="bbt2" src="https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg" width="450" height="350">
+      					</a>
+			</div>
+		</div>
+
+		<script>
+			filterSelection("all");
+		</script>
+
+		</body>	
+		</html>

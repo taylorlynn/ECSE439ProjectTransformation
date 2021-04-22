@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<blog:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blog="http://www.xtext.org/example/blog/Blog">
+  <images name="harryPotter" url="https://www.liveabout.com/thmb/zRCNMwbQx1MIBEoj7nqC0m_detM=/1265x712/smart/filters:no_upscale()/urawattharry-5ada2c3a18ba0100371a5552.JPG"/>
+  <images name="harryPotter2" url="https://bookstr.com/wp-content/uploads/2019/09/Featured-image-via-BookBub.png"/>
+  <images name="lotr" url="https://decider.com/wp-content/uploads/2020/06/lord-of-the-rings-sean-bean.jpg?quality=80&amp;strip=all&amp;w=978"/>
+  <images name="got" url="https://worldwideinterweb.com/wp-content/uploads/2017/07/game-of-throne-memes-2.jpg"/>
+  <images name="friends" url="https://www.liveabout.com/thmb/hscG6lGOZeu4SFqvOqtE0C_2XZs=/837x640/filters:no_upscale():max_bytes(150000):strip_icc()/BFF27-5ac2f4b38023b9003671cb46.jpg"/>
+  <images name="friends2" url="https://i.chzbgr.com/full/9571336960/h85DECDD6/funny-memes-stupid-memes-memes-friday-the-13th-friday-the-13th-2020-friends-joeys-delayed-reaction"/>
+  <images name="bbt" url="https://i.chzbgr.com/full/7074992128/h2125F6BD/the-tune-of-sheldon"/>
+  <images name="bbt2" url="https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg"/>
+  <categories name="movie"/>
+  <categories name="tv"/>
+  <categories name="favourites"/>
+  <site name="My Second Blog" description="some of my favourite memes" hasNavbar="true" iconUrl="https://cdn.nar.realtor/sites/default/files/styles/main_stage_image/public/CS_Memes-02_14_20-1300w_v2.jpg?itok=reUsW1ge">
+    <pages name="Lord of the Rings" description="A collection of Lord of the Rings memes" categories="//@categories.0">
+      <sections name="images">
+        <content xsi:type="blog:ImageContent" image="//@images.2"/>
+      </sections>
+    </pages>
+    <pages name="Game of Thrones" description="A collection of GoT memes" categories="//@categories.1 //@categories.2">
+      <sections name="images">
+        <content xsi:type="blog:ImageContent" image="//@images.3"/>
+      </sections>
+    </pages>
+    <pages name="Harry Potter" description="A collection of Harry Potter memes" categories="//@categories.0 //@categories.2">
+      <sections name="images">
+        <content xsi:type="blog:ImageContent" image="//@images.0"/>
+        <content xsi:type="blog:ImageContent" image="//@images.1"/>
+      </sections>
+    </pages>
+    <pages name="The Big Bang Theory" description="A collection of Big Bang Theory memes" categories="//@categories.1">
+      <sections name="images">
+        <content xsi:type="blog:ImageContent" image="//@images.6"/>
+        <content xsi:type="blog:ImageContent" image="//@images.7"/>
+      </sections>
+    </pages>
+    <pages name="Friends" description="A collection of Friends memes" categories="//@categories.1">
+      <sections name="images">
+        <content xsi:type="blog:ImageContent" image="//@images.4"/>
+        <content xsi:type="blog:ImageContent" image="//@images.5"/>
+      </sections>
+      <sections name="An Example of an image re-use">
+        <content xsi:type="blog:ParagraphContent" content="This image is intentially misplaced."/>
+        <content xsi:type="blog:ImageContent" image="//@images.7"/>
+      </sections>
+    </pages>
+  </site>
+</blog:Model>

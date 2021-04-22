@@ -1,12 +1,78 @@
-categories: work; school; end
+images: 
+	harryPotter: "https://www.liveabout.com/thmb/zRCNMwbQx1MIBEoj7nqC0m_detM=/1265x712/smart/filters:no_upscale()/urawattharry-5ada2c3a18ba0100371a5552.JPG";
+	harryPotter2: "https://bookstr.com/wp-content/uploads/2019/09/Featured-image-via-BookBub.png";
+	lotr: "https://decider.com/wp-content/uploads/2020/06/lord-of-the-rings-sean-bean.jpg?quality=80&strip=all&w=978";
+	got: "https://worldwideinterweb.com/wp-content/uploads/2017/07/game-of-throne-memes-2.jpg";
+	friends: "https://www.liveabout.com/thmb/hscG6lGOZeu4SFqvOqtE0C_2XZs=/837x640/filters:no_upscale():max_bytes(150000):strip_icc()/BFF27-5ac2f4b38023b9003671cb46.jpg";
+	friends2: "https://i.chzbgr.com/full/9571336960/h85DECDD6/funny-memes-stupid-memes-memes-friday-the-13th-friday-the-13th-2020-friends-joeys-delayed-reaction";
+	bbt: "https://i.chzbgr.com/full/7074992128/h2125F6BD/the-tune-of-sheldon";
+	bbt2: "https://64.media.tumblr.com/e75948cb1fa03f5560423df4a172b374/tumblr_odyltbnk7e1uj7sd1o1_500.jpg";
+	
+end
 
-site 'my web':
-	description: 'my sample site';
-	icon: 'www.google.ca';
+categories: movie; tv; favourites; end
+
+site "My Second Blog":
+	description: "some of my favourite memes";
+	has_navbar;
+	icon: "https://cdn.nar.realtor/sites/default/files/styles/main_stage_image/public/CS_Memes-02_14_20-1300w_v2.jpg?itok=reUsW1ge";
 	pages: 
-		page 'home':
-			description: 'my home page';
-			categories: [work];
+		page "Lord of the Rings":
+			description: 'A collection of Lord of the Rings memes';
+			categories: [movie];
+			sections:
+        		section "images":
+          			image: lotr;
+          		end
+        	end
+			
+		end
+		page "Game of Thrones":
+			description: 'A collection of GoT memes';
+			categories: [tv, favourites];
+			sections:
+        		section "images":
+          			image: got;
+          		end
+        	end
+			
+		end
+		page "Harry Potter":
+			description: 'A collection of Harry Potter memes';
+			categories: [movie, favourites];
+			sections:
+        		section "images":
+          			image: harryPotter;
+          			image: harryPotter2;
+          		end
+        	end
+			
+		end
+		page "The Big Bang Theory":
+			description: 'A collection of Big Bang Theory memes';
+			categories: [tv];
+			sections:
+        		section "images":
+          			image: bbt;
+          			image: bbt2;
+          		end
+        	end
+			
+		end
+		page "Friends":
+			description: 'A collection of Friends memes';
+			categories: [tv];
+			sections:
+        		section "images":
+          			image: friends;
+          			image: friends2;
+          		end
+          		section "An Example of an image re-use" :
+          			paragraph: "This image is intentially misplaced.";
+          			image: bbt2;
+          		end
+        	end
+			
 		end
 	end
 end

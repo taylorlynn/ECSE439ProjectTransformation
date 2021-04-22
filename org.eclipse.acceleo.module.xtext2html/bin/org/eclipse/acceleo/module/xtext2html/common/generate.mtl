@@ -11,9 +11,9 @@
 		<!DOCTYPE html>
 		
 		<html>
+		<head>
 		<script>
 			[comment The below functions have been modified from w3schools /]
-			filterSelection("all")
 			function filterSelection(c) {
   				var x, i;
   				x = document.getElementsByClassName("filterPage");
@@ -64,14 +64,43 @@
 				margin-top: 20px;
 				overflow: hidden;
 			}
+
+			.navBar {
+			  border: none;
+			  outline: none;
+			  padding: 12px 16px;
+			  background-color: #f1f1f1;
+			  cursor: pointer;
+			}
+			
+			.navBar:hover {
+			  background-color: #ddd;
+			}
+			
+			.navBar.active {
+			  background-color: #666;
+			  color: white;
+			}
 		</style>
-		<head>
-			<h1> [m.site.name/] </h1>
-			<h3> [m.site.description/] </h3>
 		
+		<link rel="icon" href="[m.site.iconUrl/]" type="image/x-icon">
 		</head>
 		<body>
+		<h1> [m.site.name/] </h1>
+		<h3> [m.site.description/] </h3>
+
+		[if (m.site.hasNavbar) ]
+		<div id="myNavBar">
+			<h4> Navigate to a page! </h4>
+			
+		[for (p: Page | m.site.pages) separator('\n')]
+			<button class="navBar" onclick="filterSelection('[p.name/]')">[p.name/]</button>
+		[/for]
+
+		</div>
+		[/if]
 		<div id="myBtnContainer">
+			<h4> Filter Pages by the following categories : </h4>
 			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 			
 		[for (c: Category | m.categories) separator('\n')]
@@ -82,7 +111,7 @@
 
 		<div class="container">
 		[for (p: Page | m.site.pages) separator('\n')]
-			<div class="filterPage [for (c:Category | p.categories) separator(' ')][c.name/][/for]">
+			<div class="filterPage [for (c:Category | p.categories) separator(' ')][c.name/][/for] [p.name/]">
 				<h2> Page : [p.name/]</h2>
 				<h4>[p.description/]</h4>
 				[for (s:Section | p.sections) separator('\n')]
@@ -101,6 +130,10 @@
 			</div>
 		[/for]
 		</div>
+
+		<script>
+			filterSelection("all");
+		</script>
 
 		</body>	
 		</html>

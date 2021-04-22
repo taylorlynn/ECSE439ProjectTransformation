@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <blog:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:blog="http://www.xtext.org/example/blog/Blog">
-  <categories name="work"/>
-  <categories name="school"/>
-  <site name="my web" description="my sample site" iconUrl="www.google.ca">
-    <pages name="home" description="my home page" categories="//@categories.0"/>
+  <site name="My First Blog" description="a really simple example" iconUrl="https://revenuearchitects.com/wp-content/uploads/2017/02/Blog_pic.png">
+    <pages name="home" description="my home page"/>
   </site>
 </blog:Model>

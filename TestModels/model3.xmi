@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <blog:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:blog="http://www.xtext.org/example/blog/Blog">
   <images name="catImage" url="https://www.rd.com/wp-content/uploads/2019/05/American-shorthair-cat-scaled.jpg"/>
-  <images name="dogImage" url="https://someotherlink.com/..."/>
   <images name="aTree" url="https://hedgekingottawa.ca/wp-content/uploads/2020/11/tree-care.jpg"/>
-  <categories name="ecse439"/>
-  <categories name="comp360"/>
+  <categories name="ecse"/>
+  <categories name="comp"/>
   <categories name="school"/>
   <categories name="fun"/>
-  <site name="My Blog Site" description="A simple blog site covering my courses over my academic career" hasNavbar="true" iconUrl="https://somelink.to/favicon.ico">
+  <site name="My Third Blog Site" description="A simple blog site covering my courses over my academic career" hasNavbar="true" iconUrl="https://albertoroura.com/wp-content/uploads/2014/05/html5_logo.png">
     <pages name="ECSE 439" description="About my experiences in ECSE 439" categories="//@categories.2 //@categories.0">
       <sections name="First Lecture">
         <content xsi:type="blog:ParagraphContent" content="The first lecture was cool"/>
@@ -23,7 +22,14 @@
     <pages name="COMP 360" description="Algorithm Design" categories="//@categories.2 //@categories.1">
       <sections name="My thoughts">
         <content xsi:type="blog:ParagraphContent" content="I like trees"/>
-        <content xsi:type="blog:ImageContent" image="//@images.2"/>
+        <content xsi:type="blog:ImageContent" image="//@images.1"/>
+      </sections>
+    </pages>
+    <pages name="COMP 330" description="Theory of Computation" categories="//@categories.2 //@categories.1">
+      <sections name="Midterm notes">
+        <content xsi:type="blog:ParagraphContent" content="I need to study &lt;b> state machines &lt;/b>"/>
+        <content xsi:type="blog:ParagraphContent" content="I need to study &lt;b> state machines &lt;/b>"/>
+        <content xsi:type="blog:ParagraphContent" content="I need to study &lt;b> grammars &lt;/b>"/>
       </sections>
     </pages>
     <pages name="My own coding work" description="My personal projects" categories="//@categories.3"/>

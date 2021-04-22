@@ -1,8 +1,8 @@
 		<!DOCTYPE html>
 		
 		<html>
+		<head>
 		<script>
-			filterSelection("all")
 			function filterSelection(c) {
   				var x, i;
   				x = document.getElementsByClassName("filterPage");
@@ -53,19 +53,52 @@
 				margin-top: 20px;
 				overflow: hidden;
 			}
+
+			.navBar {
+			  border: none;
+			  outline: none;
+			  padding: 12px 16px;
+			  background-color: #f1f1f1;
+			  cursor: pointer;
+			}
+			
+			.navBar:hover {
+			  background-color: #ddd;
+			}
+			
+			.navBar.active {
+			  background-color: #666;
+			  color: white;
+			}
 		</style>
-		<head>
-			<h1> My Blog Site </h1>
-			<h3> A simple blog site covering my courses over my academic career </h3>
 		
+		<link rel="icon" href="https://albertoroura.com/wp-content/uploads/2014/05/html5_logo.png" type="image/x-icon">
 		</head>
 		<body>
+		<h1> My Third Blog Site </h1>
+		<h3> A simple blog site covering my courses over my academic career </h3>
+
+		<div id="myNavBar">
+			<h4> Navigate to a page! </h4>
+			
+			<button class="navBar" onclick="filterSelection('ECSE 439')">ECSE 439</button>
+
+			<button class="navBar" onclick="filterSelection('COMP 360')">COMP 360</button>
+
+			<button class="navBar" onclick="filterSelection('COMP 330')">COMP 330</button>
+
+			<button class="navBar" onclick="filterSelection('My own coding work')">My own coding work</button>
+
+			<button class="navBar" onclick="filterSelection('No categories here!')">No categories here!</button>
+
+		</div>
 		<div id="myBtnContainer">
+			<h4> Filter Pages by the following categories : </h4>
 			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 			
-			<button class="btn" onclick="filterSelection('ecse439')">ecse439</button>
+			<button class="btn" onclick="filterSelection('ecse')">ecse</button>
 
-			<button class="btn" onclick="filterSelection('comp360')">comp360</button>
+			<button class="btn" onclick="filterSelection('comp')">comp</button>
 
 			<button class="btn" onclick="filterSelection('school')">school</button>
 
@@ -74,7 +107,7 @@
 		</div>
 
 		<div class="container">
-			<div class="filterPage school ecse439">
+			<div class="filterPage school ecse ECSE 439">
 				<h2> Page : ECSE 439</h2>
 				<h4>About my experiences in ECSE 439</h4>
 					<h3> Section : First Lecture </h3>
@@ -94,7 +127,7 @@
 						<p> The end </p>
 			</div>
 
-			<div class="filterPage school comp360">
+			<div class="filterPage school comp COMP 360">
 				<h2> Page : COMP 360</h2>
 				<h4>Algorithm Design</h4>
 					<h3> Section : My thoughts </h3>
@@ -105,16 +138,31 @@
       					</a>
 			</div>
 
-			<div class="filterPage fun">
+			<div class="filterPage school comp COMP 330">
+				<h2> Page : COMP 330</h2>
+				<h4>Theory of Computation</h4>
+					<h3> Section : Midterm notes </h3>
+						<p> I need to study <b> state machines </b> </p>
+
+						<p> I need to study <b> state machines </b> </p>
+
+						<p> I need to study <b> grammars </b> </p>
+			</div>
+
+			<div class="filterPage fun My own coding work">
 				<h2> Page : My own coding work</h2>
 				<h4>My personal projects</h4>
 			</div>
 
-			<div class="filterPage ">
+			<div class="filterPage  No categories here!">
 				<h2> Page : No categories here!</h2>
 				<h4>My personal projects</h4>
 			</div>
 		</div>
+
+		<script>
+			filterSelection("all");
+		</script>
 
 		</body>	
 		</html>
